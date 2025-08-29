@@ -1,9 +1,9 @@
 :root {
-  --bg: #62aced;
+  --bg: #0589fd;
   --panel: #ffffff;
   --card: #1e3cd5;
   --text: #eef2ff;
-  --muted: #080416;
+  --muted: #0589fd;
   --accent: #6366f1;
   --border: rgba(255,255,255,.08);
 }
@@ -28,10 +28,20 @@ body {
   padding-bottom: 10px;
 }
 
+.header-panel {
+  background: #d9fffa;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  margin: 0 20px 16px; /* space below header before layout */
+  padding: 12px 20px;
+}
+
 .app-header h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 36px;
   letter-spacing: .3px;
+  color: var(--muted); 
+  font-family: cursive; 
 
 }
 
@@ -49,7 +59,6 @@ body {
 .panel {
   background: var(--panel);
   border: 1px solid var(--border);
-  border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
   padding: 18px;
 }
@@ -130,4 +139,3 @@ body {
   object-fit: contain;
   border-radius: 8px;
 }
-

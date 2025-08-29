@@ -46,15 +46,15 @@ search.addWidgets([
   }),
 ]);
 
-search.addWidgets([
-  instantsearch.widgets.rangeInput({
-    container: '#price-range',
-    attribute: 'price',
-    templates: {
-      separatorText: 'to',
-    },
-  }),
-]);
+// search.addWidgets([
+//   instantsearch.widgets.rangeInput({
+//     container: '#price-range',
+//     attribute: 'price',
+//     templates: {
+//       separatorText: 'to',
+//     },
+//   }),
+// ]);
 
 search.addWidgets([
   instantsearch.widgets.pagination({
