@@ -1,0 +1,133 @@
+:root {
+  --bg: #62aced;
+  --panel: #ffffff;
+  --card: #1e3cd5;
+  --text: #eef2ff;
+  --muted: #080416;
+  --accent: #6366f1;
+  --border: rgba(255,255,255,.08);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 20px;
+  padding-bottom: 10px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: .3px;
+
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 20px;
+  padding: 0 20px 28px;
+}
+
+@media (max-width: 920px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  padding: 18px;
+}
+
+.panel h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+.facet { margin: 14px 0; }
+.facet h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.results-header,
+.results-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 8px 0 14px;
+}
+
+/* Hits grid */
+#hits .ais-Hits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* was auto-fill/minmax(220px,1fr) */
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#hits .ais-Hits-item {
+  width: 100%;   /* fill the column */
+  min-width: 0;  /* allow children to shrink/wrap */
+  overflow: hidden;
+  display: block;
+}
+
+#hits .ais-Hits-item > .product-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* Facets (refinement lists, menus) */
+.ais-RefinementList-label,
+.ais-Menu-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: background .12s;
+}
+
+.ais-RefinementList-label:hover,
+.ais-Menu-item:hover {
+  background: rgba(255,255,255,.05);
+  cursor: pointer;
+}
+
+.ais-RefinementList-checkbox,
+.ais-Menu-checkbox {
+  margin-right: 6px;
+}
+
+#hits .product-image {
+  width: 100%;
+  height: 100px;     /* adjust 90–130px to taste */
+  object-fit: contain;
+  border-radius: 8px;
+}
+

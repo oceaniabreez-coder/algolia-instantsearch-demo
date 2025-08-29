@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Algolia InstantSearch Demo</title>
+
+  <!-- Algolia / InstantSearch CSS theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/algolia-min.css">
+
+  <!--  stylesheet -->
+  <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+    
+  <header class="app-header">
+    <h1>Spencer and Williams</h1>
+    <div id="searchbox"></div>
+  </header>
+
+  <div class="layout">
+    <!-- Left: Filters -->
+    <aside class="panel">
+      <h3>Filters</h3>
+      <div id="clear-refinements"></div>
+
+      <div class="facet">
+        <h4>Brand</h4>
+        <div id="brand-list"></div>
+      </div>
+
+      <div class="facet">
+        <h4>Category</h4>
+        <div id="category-menu"></div>
+      </div>
+
+      <div class="facet">
+        <h4>Price</h4>
+        <div id="price-range"></div>
+      </div>
+    </aside>
+
+    <!-- Right: Results -->
+    <main class="panel">
+      <div class="results-header">
+        <div id="stats"></div>
+        <div id="hits-per-page"></div>
+      </div>
+
+      <div id="hits"></div>
+
+      <div class="results-footer">
+        <div id="pagination"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+  <!-- Algolia libraries (CDN) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+    <script defer src="./app.js"></script>
